@@ -1,0 +1,69 @@
+<script type="text/javascript">   
+    $(document).ready( function() {
+        var modal = document.getElementById('modal-bg');
+        var btn_open = document.getElementById("modal-open");
+        var btn_close = document.getElementById("modal-close");                                          
+
+        btn_open.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        btn_close.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    });
+</script>
+
+<style>
+    #modal-bg {
+        display: none;
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+        background-color:white;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translateX(-50%) translateY(-50%);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #888;
+        width: 80%;
+        height: 80%;                         
+    }
+    #modal-close {
+        width: 30px;
+        height: 30px;
+        background-image: url("/img/close.png");
+        background-size: cover;
+        cursor: pointer;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    #modal-open {
+        cursor: pointer;
+    }
+</style>
+
+<div id="modal-bg">
+    <div class="modal-content">
+        <div id="modal-close"></div>                                                           
+        <iframe src="http://sejusports.tk/gnuboard/bbs/board.php?bo_table=certificates" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0"></iframe>
+    </div>
+</div>
